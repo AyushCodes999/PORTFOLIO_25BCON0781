@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Personal Portfolio of Ayush Raj Chandel (25BCON0781) - Computer Science Engineering undergraduate at JECRC University featuring practical engineering projects, AI-assisted development, and an integrated Gemini AI Chatbot.">
+    <meta name="keywords"
+        content="Ayush Raj Chandel, Portfolio, Computer Science Engineering, JECRC University, Python, JavaScript, Gemini API, AI Chatbot, Brutalist Design">
+    <meta name="author" content="Ayush Raj Chandel">
+    <title>Ayush Raj Chandel | Portfolio &amp; AI Assistant</title>
+
+    <!-- Google Fonts: Anton (Colossal Condensed Headlines) + Space Grotesk (Architectural Sans) + Plus Jakarta Sans (Body) + JetBrains Mono (Technical Tags) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-theme="light">
+    <!-- Top Industrial Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand" aria-label="Ayush Raj Chandel Home">
+                <span class="brand-bracket">&lt;</span>
+                <span class="brand-name">AYUSH RAJ CHANDEL</span>
+                <span class="brand-bracket">/&gt;</span>
+                <span class="brand-tag">25BCON0781</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">WORK</a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#skills" class="nav-link">SKILLS</a>
+                <a href="#projects" class="nav-link">PROJECTS</a>
+                <a href="#chatbot" class="nav-link nav-highlight">AI CHATBOT</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="themeToggleBtn" class="theme-toggle" type="button" aria-label="Toggle light or dark theme" title="Toggle Theme">
+                    <span id="themeIcon" class="theme-icon">🌙</span>
+                </button>
+                <a href="#chatbot" class="btn btn-sm btn-ask-ai">ASK AI</a>
+                <button id="mobileMenuBtn" class="mobile-toggle" type="button" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. ASYMMETRIC SPLIT-SCREEN HERO SECTION -->
+        <section id="home" class="hero-split-section">
+            <div class="hero-split-container">
+                <!-- Left Dominant Typographic Black Canvas -->
+                <div class="hero-left-field">
+                    <!-- Slanted Graphic Tag (Reference Inspiration) -->
+                    <div class="slanted-tape-badge">
+                        <span class="tape-text">EST. 2025 // CS ENGINEERING &bull; JECRC UNIVERSITY</span>
+                    </div>
+
+                    <!-- Colossal Condensed Headline -->
+                    <h1 class="hero-colossal-title">
+                        <span class="title-line-1">BUILDING</span>
+                        <span class="title-line-2" id="rn-hero-underline">INTELLIGENT</span>
+                        <span class="title-line-3">SYSTEMS</span>
+                    </h1>
+
+                    <div class="hero-statement">
+                        <p class="hero-bio-text">
+                            Hello, I'm <strong class="highlight-text" id="rn-hero-highlight">Ayush Raj Chandel</strong> 
+                            <span class="code-font" id="rn-hero-box">ROLL: 25BCON0781</span>. 
+                            Undergraduate Computer Science Engineering student at <strong>JECRC University</strong>. 
+                            I engineer clean algorithmic architectures, build reliable full-stack applications, and design grounded AI workflows.
+                        </p>
+                    </div>
+
+                    <!-- Brutalist Physical CTAs -->
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn btn-hero-primary">
+                            <span>SEE OUR WORK</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <a href="#chatbot" class="btn btn-hero-secondary">
+                            <span>TALK TO PORTFOLIO AI</span>
+                            <span class="sparkle">✨</span>
+                        </a>
+                        <a href="#contact" class="btn btn-hero-ghost">
+                            <span>CONTACT</span>
+                        </a>
+                    </div>
+
+                    <!-- Hero Metadata Bar -->
+                    <div class="hero-meta-bar">
+                        <div class="meta-block">
+                            <span class="meta-num">05</span>
+                            <span class="meta-label">PRACTICAL PROJECTS</span>
+                        </div>
+                        <div class="meta-slash">/</div>
+                        <div class="meta-block">
+                            <span class="meta-num">100%</span>
+                            <span class="meta-label">VANILLA JS &bull; CSS</span>
+                        </div>
+                        <div class="meta-slash">/</div>
+                        <div class="meta-block">
+                            <span class="meta-num">9/9</span>
+                            <span class="meta-label">UNIT TESTS PASSING</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Massive Acid Yellow Field with Selective Glass HUD Panel -->
+                <div class="hero-right-field">
+                    <!-- Angular Brutalist Sticker (Reference Inspiration) -->
+                    <div class="rotated-brutal-sticker sticker-top">
+                        <span>ERROR 404: BORING DESIGN NOT FOUND</span>
+                    </div>
+
+                    <!-- Selective Floating Frosted Glass HUD Badge -->
+                    <div class="floating-glass-hud" id="devBadge">
+                        <!-- Top HUD Bar -->
+                        <div class="hud-top-strip">
+                            <span class="hud-status-chip"><span class="blink-dot">●</span> AUTH // DEV.PASSPORT</span>
+                            <span class="hud-barcode-graphic">|||| | ||| |||| |</span>
+                        </div>
+
+                        <!-- Badge Identity Core -->
+                        <div class="hud-identity-core">
+                            <div class="hud-crest-box">
+                                <span class="crest-code">&lt;ARC/&gt;</span>
+                                <span class="crest-sub">DEV_01</span>
+                            </div>
+                            <div class="hud-name-box">
+                                <span class="hud-sub-label">IDENTITY_RECORD</span>
+                                <h2 class="hud-dev-name">Ayush Raj Chandel</h2>
+                                <span class="hud-id-tag">ID: 25BCON0781</span>
+                            </div>
+                        </div>
+
+                        <div class="hud-divider-line"></div>
+
+                        <!-- Technical Specification Fields -->
+                        <div class="hud-spec-table">
+                            <div class="spec-row">
+                                <span class="spec-k">DISCIPLINE:</span>
+                                <span class="spec-v">Computer Science Engineering</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-k">DEGREE:</span>
+                                <span class="spec-v">B.Tech (2025–2029) &bull; Undergrad</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-k">ACADEMY:</span>
+                                <span class="spec-v">JECRC University, Jaipur</span>
+                            </div>
+                        </div>
+
+                        <!-- Core Capabilities (Preserved Labels) -->
+                        <div class="hud-modules-grid">
+                            <div class="hud-mod-card mod-python">
+                                <div class="mod-icon-line">
+                                    <span class="mod-ico">🐍</span>
+                                    <strong class="mod-name">Python &amp; Logic</strong>
+                                </div>
+                                <span class="mod-badge">Core Algorithm</span>
+                            </div>
+                            <div class="hud-mod-card mod-web">
+                                <div class="mod-icon-line">
+                                    <span class="mod-ico">⚡</span>
+                                    <strong class="mod-name">Web &amp; AI Prompting</strong>
+                                </div>
+                                <span class="mod-badge">Gemini &bull; DOM</span>
+                            </div>
+                        </div>
+
+                        <!-- Verification Footer -->
+                        <div class="hud-bottom-status">
+                            <span id="rn-hero-circle">STATUS: ACTIVE &bull; VERIFIED</span>
+                            <span>SN: 25BCON0781-JECRCU</span>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Right Editorial Accent Tag -->
+                    <div class="rotated-brutal-sticker sticker-bottom">
+                        <span>FULL-STACK // AI WORKFLOWS // 2025–2029</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full-Width High-Contrast Marquee Ticker -->
+        <div class="marquee-ticker-banner" aria-hidden="true">
+            <div class="marquee-track">
+                <span>AYUSH RAJ CHANDEL &bull; B.TECH COMPUTER SCIENCE &bull; JECRC UNIVERSITY &bull; ROLL: 25BCON0781 &bull; 5 CORE PRACTICAL PROJECTS &bull; GEMINI AI INTEGRATION &bull; PYTHON &amp; LOGIC &bull; WEB &amp; AI PROMPTING &bull; ALGORITHMIC RIGOR &bull;&nbsp;</span>
+                <span>AYUSH RAJ CHANDEL &bull; B.TECH COMPUTER SCIENCE &bull; JECRC UNIVERSITY &bull; ROLL: 25BCON0781 &bull; 5 CORE PRACTICAL PROJECTS &bull; GEMINI AI INTEGRATION &bull; PYTHON &amp; LOGIC &bull; WEB &amp; AI PROMPTING &bull; ALGORITHMIC RIGOR &bull;&nbsp;</span>
+            </div>
+        </div>
+
+        <!-- 2. ABOUT ME SECTION (Editorial Dossier Docket) -->
+        <section id="about" class="section section-dossier">
+            <div class="container">
+                <div class="dossier-wrapper">
+                    <div class="dossier-headline-bar">
+                        <span class="section-tag-brutal">[DOSSIER 01 // IDENTITY]</span>
+                        <h2 class="dossier-main-title" data-rn-type="underline" data-rn-color="#FFE500" data-rn-width="6">
+                            ABOUT / WHO AM I
+                        </h2>
+                        <span class="dossier-serial">REF: JECRCU-CSE-25BCON0781</span>
+                    </div>
+
+                    <div class="dossier-grid">
+                        <div class="dossier-bio-column">
+                            <div class="bio-lead-block">
+                                <div class="bio-meta-strip">
+                                    <span class="bio-roll-tag"><span class="roll-indicator">●</span> ROLL NO: <strong>25BCON0781</strong></span>
+                                    <span class="bio-spec-tag">SPECIALIZATION: AI &amp; MACHINE LEARNING</span>
+                                </div>
+                                <h3 class="bio-lead-title">ENGINEERING RIGOR &bull; SYSTEMATIC PROBLEM SOLVING</h3>
+                                <p class="bio-paragraph">
+                                    Hello! I’m <strong>Ayush Raj Chandel</strong>, a Computer Science Engineering undergraduate at <strong>JECRC University</strong>, specializing in AI and Machine Learning. I enjoy exploring Python, problem-solving, and web development, turning ideas into practical projects while strengthening my foundations in software engineering.
+                                </p>
+                                <p class="bio-paragraph">
+                                    I’m particularly interested in building intelligent applications, experimenting with emerging AI tools, and creating technology that solves real-world problems. My goal is to keep learning, build meaningful projects, and grow into an engineer who combines strong fundamentals with creative thinking.
+                                </p>
+                            </div>
+
+                            <div class="dossier-spec-cards">
+                                <div class="dossier-card">
+                                    <div class="card-icon-tag">🎓</div>
+                                    <div class="card-text">
+                                        <h4>ACADEMIC PROGRAM</h4>
+                                        <p>B.Tech in Computer Science &amp; Engineering &bull; <em>JECRC University, Jaipur, Rajasthan</em> (2025–2029)</p>
+                                    </div>
+                                </div>
+                                <div class="dossier-card">
+                                    <div class="card-icon-tag">📍</div>
+                                    <div class="card-text">
+                                        <h4>DEPARTMENT &amp; LOCATION</h4>
+                                        <p><em>CSE Department, JECRC University, Jaipur, Rajasthan</em> &bull; Open to Remote / Hybrid</p>
+                                    </div>
+                                </div>
+                                <div class="dossier-card">
+                                    <div class="card-icon-tag">💡</div>
+                                    <div class="card-text">
+                                        <h4>SPECIALIZATION DOMAINS</h4>
+                                        <p>Full-Stack Web Engineering, AI &amp; Prompt Engineering, Algorithmic Optimization, TDD</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dossier-roadmap-column">
+                            <div class="roadmap-header">
+                                <h3>COURSEWORK CHANGELOG</h3>
+                                <span class="roadmap-badge">4 PHASES COMPLETED</span>
+                            </div>
+
+                            <div class="changelog-stream">
+                                <div class="changelog-entry">
+                                    <div class="entry-marker">01</div>
+                                    <div class="entry-content">
+                                        <span class="entry-time">ASSIGNMENTS 1–7</span>
+                                        <h4>AI PROMPTS &amp; C-TO-PYTHON TRANSLATION</h4>
+                                        <p>Mastered tokenization, 3-step chain prompting, prompt framing, and recursive algorithmic translation.</p>
+                                    </div>
+                                </div>
+                                <div class="changelog-entry">
+                                    <div class="entry-marker">02</div>
+                                    <div class="entry-content">
+                                        <span class="entry-time">ASSIGNMENT 8</span>
+                                        <h4>RED &rarr; FIX &rarr; GREEN TEST-DRIVEN DEBUGGING</h4>
+                                        <p>Diagnosed and fixed 3 major defects in student score calculation with Cursor AI, passing 9/9 unit tests.</p>
+                                    </div>
+                                </div>
+                                <div class="changelog-entry">
+                                    <div class="entry-marker">03</div>
+                                    <div class="entry-content">
+                                        <span class="entry-time">ASSIGNMENTS 9–11</span>
+                                        <h4>INTERACTIVE WEB APPLICATIONS &amp; VIBE CODING</h4>
+                                        <p>Engineered responsive DOM portfolio, 5-question test-matrix quiz engine, and local-storage reading tracker.</p>
+                                    </div>
+                                </div>
+                                <div class="changelog-entry">
+                                    <div class="entry-marker">04</div>
+                                    <div class="entry-content">
+                                        <span class="entry-time">INTERNAL ASSESSMENT</span>
+                                        <h4>PRODUCTION PORTFOLIO &amp; RAG AI CHATBOT</h4>
+                                        <p>Integrated full-scale single-page client application with real-time filtering, theme engine, and Gemini API chatbot.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SKILLS SECTION (Technical Matrix Grid) -->
+        <section id="skills" class="section section-skills">
+            <div class="container">
+                <div class="section-heading-block">
+                    <span class="section-tag-brutal">[CAPABILITIES // MATRIX]</span>
+                    <h2 class="section-title-bold" data-rn-type="bracket" data-rn-color="#0A0A0A" data-rn-width="4">
+                        TECHNICAL TOOLKIT
+                    </h2>
+                    <p class="section-subtitle-text">
+                        A systematic inventory of languages, frontend architecture, prompt strategies, and developer workflows.
+                    </p>
+                </div>
+
+                <div class="skills-matrix-grid">
+                    <!-- Column 1: Programming Languages -->
+                    <div class="matrix-card">
+                        <div class="matrix-card-head">
+                            <span class="matrix-ico">💻</span>
+                            <h3>PROGRAMMING LANGUAGES</h3>
+                        </div>
+                        <ul class="matrix-list">
+                            <li><span class="skill-name">Python 3</span><span class="skill-meter">[ADVANCED]</span></li>
+                            <li><span class="skill-name">JavaScript (ES6+)</span><span class="skill-meter">[INTERMEDIATE]</span></li>
+                            <li><span class="skill-name">C Programming</span><span class="skill-meter">[INTERMEDIATE]</span></li>
+                            <li><span class="skill-name">HTML5 / Semantic Web</span><span class="skill-meter">[ADVANCED]</span></li>
+                            <li><span class="skill-name">CSS3 / Vanilla Styling</span><span class="skill-meter">[ADVANCED]</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: AI & Prompt Engineering -->
+                    <div class="matrix-card">
+                        <div class="matrix-card-head">
+                            <span class="matrix-ico">🧠</span>
+                            <h3>AI &amp; PROMPT ENGINEERING</h3>
+                        </div>
+                        <ul class="matrix-list">
+                            <li><span class="skill-name">Gemini REST Integration</span><span class="skill-meter">[GROUNDED]</span></li>
+                            <li><span class="skill-name">3-Step Chain Prompting</span><span class="skill-meter">[PRACTICED]</span></li>
+                            <li><span class="skill-name">Reverse Prompt Review</span><span class="skill-meter">[PRACTICED]</span></li>
+                            <li><span class="skill-name">AI-Assisted Debugging</span><span class="skill-meter">[ADVANCED]</span></li>
+                            <li><span class="skill-name">RAG Knowledge Retrieval</span><span class="skill-meter">[INTERMEDIATE]</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Web Architecture -->
+                    <div class="matrix-card">
+                        <div class="matrix-card-head">
+                            <span class="matrix-ico">🌐</span>
+                            <h3>WEB ARCHITECTURE</h3>
+                        </div>
+                        <ul class="matrix-list">
+                            <li><span class="skill-name">DOM State Management</span><span class="skill-meter">[PROFICIENT]</span></li>
+                            <li><span class="skill-name">Responsive Mobile First</span><span class="skill-meter">[PROFICIENT]</span></li>
+                            <li><span class="skill-name">LocalStorage Persistence</span><span class="skill-meter">[PROFICIENT]</span></li>
+                            <li><span class="skill-name">CSS Variables Theming</span><span class="skill-meter">[PROFICIENT]</span></li>
+                            <li><span class="skill-name">Semantic Accessibility</span><span class="skill-meter">[STANDARD]</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Developer Tools -->
+                    <div class="matrix-card">
+                        <div class="matrix-card-head">
+                            <span class="matrix-ico">🛠️</span>
+                            <h3>TOOLS &amp; WORKFLOWS</h3>
+                        </div>
+                        <ul class="matrix-list">
+                            <li><span class="skill-name">Cursor AI IDE</span><span class="skill-meter">[DAILY]</span></li>
+                            <li><span class="skill-name">Git &amp; GitHub</span><span class="skill-meter">[DAILY]</span></li>
+                            <li><span class="skill-name">Vercel Deployment</span><span class="skill-meter">[PROFICIENT]</span></li>
+                            <li><span class="skill-name">Python unittest</span><span class="skill-meter">[PROFICIENT]</span></li>
+                            <li><span class="skill-name">Chrome DevTools</span><span class="skill-meter">[PROFICIENT]</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROJECTS SECTION (Visual Centerpiece Dossier Archive) -->
+        <section id="projects" class="section section-projects">
+            <div class="container">
+                <div class="projects-section-header">
+                    <div>
+                        <span class="section-tag-brutal">[ARCHIVE // VERIFIED WORK]</span>
+                        <h2 class="section-title-bold" data-rn-type="underline" data-rn-color="#FFE500" data-rn-width="6">
+                            PRACTICAL PROJECTS
+                        </h2>
+                    </div>
+                    <p class="section-subtitle-text">
+                        All five required semester coursework applications. Use real-time keyword search or filter by domain.
+                    </p>
+                </div>
+
+                <!-- Selective Glassmorphic Search & Filter Bar -->
+                <div class="projects-toolbar frosted-glass-toolbar">
+                    <div class="search-box">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="projectSearchInput"
+                            placeholder="SEARCH BY TECH, TITLE OR KEYWORD ('Python', 'Quiz', 'Cursor', 'Testing')..."
+                            aria-label="Search projects">
+                        <button id="clearSearchBtn" class="clear-search-btn hidden" type="button" aria-label="Clear search">&times;</button>
+                    </div>
+
+                    <div class="filter-pills" id="filterPills">
+                        <button class="filter-pill active" data-filter="all">ALL (5)</button>
+                        <button class="filter-pill" data-filter="python">PYTHON (3)</button>
+                        <button class="filter-pill" data-filter="web">WEB APPS (2)</button>
+                        <button class="filter-pill" data-filter="ai">AI &amp; DEBUG (3)</button>
+                    </div>
+                </div>
+
+                <div class="results-meta-bar">
+                    <span id="projectCountDisplay">SHOWING ALL 5 PROJECTS</span>
+                </div>
+
+                <!-- Projects Grid: Industrial Folder Dossiers -->
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Project 1: Python Programs Collection -->
+                    <article class="project-card project-dossier-card" data-category="python"
+                        data-keywords="python programs collection factorial fibonacci structure dictionary struct-to-dict readme audit c conversion algorithms">
+                        <div class="dossier-tab-head">
+                            <span class="dossier-tab-idx">FILE_01.PY // CODE_TRANSLATION</span>
+                            <span class="dossier-badge-accent">PROJECT 01</span>
+                        </div>
+                        <div class="dossier-card-body">
+                            <h3 class="project-title">Python Programs Collection</h3>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Python 3</span>
+                                <span class="tech-tag">Recursion</span>
+                                <span class="tech-tag">Data Structures</span>
+                                <span class="tech-tag">README Audit</span>
+                            </div>
+                            <p class="project-desc">
+                                Core collection of clean Python scripts translated from C: Factorial with recursion
+                                &amp; iteration bounds checking, Fibonacci sequence generator, and C-style
+                                Structure-to-Dictionary data converter, accompanied by a verified README audit.
+                            </p>
+                            <div class="project-highlights-box">
+                                <span>&bull; Robust input validation &amp; boundary tests</span>
+                                <span>&bull; Zero unverified claims in README audit</span>
+                            </div>
+                            <div class="project-links-row">
+                                <a href="https://github.com/AyushCodes999/python-basics-25BCON0781-factorial" class="btn btn-sm btn-project-link" target="_blank" rel="noopener noreferrer" title="View Factorial Repo on GitHub">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    <span>FACTORIAL</span>
+                                </a>
+                                <a href="https://github.com/AyushCodes999/python-basics-25BCON0781-fibonacci" class="btn btn-sm btn-project-link" target="_blank" rel="noopener noreferrer" title="View Fibonacci Repo on GitHub">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    <span>FIBONACCI</span>
+                                </a>
+                                <a href="https://github.com/AyushCodes999/python-basics-25BCON0781-struct-to-dict" class="btn btn-sm btn-project-link" target="_blank" rel="noopener noreferrer" title="View Struct-to-Dict Repo on GitHub">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    <span>STRUCT-TO-DICT</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Messy Python Code Improvement -->
+                    <article class="project-card project-dossier-card" data-category="python ai"
+                        data-keywords="messy python code improvement refactoring cursor ai pep8 clean code dry principle average calculation optimization">
+                        <div class="dossier-tab-head">
+                            <span class="dossier-tab-idx">FILE_02.PY // REFACTORING</span>
+                            <span class="dossier-badge-accent">PROJECT 02</span>
+                        </div>
+                        <div class="dossier-card-body">
+                            <h3 class="project-title">Messy Python Code Improvement</h3>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">AI Refactoring</span>
+                                <span class="tech-tag">PEP 8</span>
+                                <span class="tech-tag">Cursor AI</span>
+                            </div>
+                            <p class="project-desc">
+                                Refactored an unmaintainable student grade calculation script using Cursor AI. Stripped
+                                unused dependencies, eliminated redundant loops via reusable mean functions, applied
+                                named constants, and preserved exact character-for-character output.
+                            </p>
+                            <div class="project-highlights-box">
+                                <span>&bull; Strict output fidelity check verified</span>
+                                <span>&bull; Added above-average student counter</span>
+                            </div>
+                            <div class="project-links-row">
+                                <a href="https://github.com/AyushCodes999/Messy_code_25bcon0781" class="btn btn-sm btn-project-link" target="_blank" rel="noopener noreferrer" title="View Messy Code Refactoring Repo on GitHub">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    <span>GITHUB REPO</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Bug Fixing Using Cursor AI -->
+                    <article class="project-card project-dossier-card" data-category="python ai"
+                        data-keywords="bug fixing cursor ai python unittest red fix green test driven development grade calculator boundary test">
+                        <div class="dossier-tab-head">
+                            <span class="dossier-tab-idx">FILE_03.PY // TDD_DEBUGGING</span>
+                            <span class="dossier-badge-accent">PROJECT 03</span>
+                        </div>
+                        <div class="dossier-card-body">
+                            <h3 class="project-title">Bug Fixing Using Cursor AI</h3>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">unittest</span>
+                                <span class="tech-tag">RED-FIX-GREEN</span>
+                                <span class="tech-tag">Cursor AI</span>
+                            </div>
+                            <p class="project-desc">
+                                Practiced test-driven bug remediation (RED &rarr; FIX &rarr; GREEN). Identified and
+                                resolved 3 critical bugs: hardcoded length average calculation, inclusive passing mark
+                                boundary condition (&ge;40), and inverted letter grade condition ordering.
+                            </p>
+                            <div class="project-highlights-box">
+                                <span>&bull; 9/9 automated unit tests passing</span>
+                                <span>&bull; Systematic Bug Observation Table</span>
+                            </div>
+                            <div class="project-links-row">
+                                <a href="https://github.com/AyushCodes999/Bug-fixing_25bcon0781" class="btn btn-sm btn-project-link" target="_blank" rel="noopener noreferrer" title="View Bug Fixing Repo on GitHub">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    <span>GITHUB REPO</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Interactive Quiz Application -->
+                    <article class="project-card project-dossier-card" data-category="web"
+                        data-keywords="interactive quiz application lecture 10 javascript html css test matrix web app questions score theme">
+                        <div class="dossier-tab-head">
+                            <span class="dossier-tab-idx">FILE_04.JS // CLIENT_APPLICATION</span>
+                            <span class="dossier-badge-accent">PROJECT 04</span>
+                        </div>
+                        <div class="dossier-card-body">
+                            <h3 class="project-title">Interactive Quiz Application</h3>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">Vanilla JS</span>
+                                <span class="tech-tag">Test Matrix</span>
+                            </div>
+                            <p class="project-desc">
+                                Client-side quiz web application created in Lecture 10. Features 5 verified web
+                                engineering questions, a progress indicator, theme toggle, and strict validation against
+                                the 6-row quiz test matrix (M1–M6) preventing duplicate score increments.
+                            </p>
+                            <div class="project-highlights-box">
+                                <span>&bull; Verified 6-row test matrix compliance</span>
+                                <span>&bull; Pure Vanilla JS DOM state management</span>
+                            </div>
+                            <div class="project-links-row">
+                                <a href="https://github.com/AyushCodes999/Quiz_app_PE_25BC0N0781" class="btn btn-sm btn-project-link" target="_blank" rel="noopener noreferrer" title="View Quiz App Repo on GitHub">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    <span>GITHUB REPO</span>
+                                </a>
+                                <button type="button" class="btn btn-sm btn-disabled" aria-disabled="true"
+                                    title="Live demo destination pending: Ayush to provide deployment URL">
+                                    <span>DEMO (PENDING)</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Book Reading List Application -->
+                    <article class="project-card project-dossier-card" data-category="web ai"
+                        data-keywords="book reading list application lecture 11 vibe coding bolt status filter duplicate 60 characters count delete localstorage">
+                        <div class="dossier-tab-head">
+                            <span class="dossier-tab-idx">FILE_05.JS // VIBE_CODING_APP</span>
+                            <span class="dossier-badge-accent">PROJECT 05</span>
+                        </div>
+                        <div class="dossier-card-body">
+                            <h3 class="project-title">Book Reading List Application</h3>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">Vanilla JS</span>
+                                <span class="tech-tag">LocalStorage</span>
+                            </div>
+                            <p class="project-desc">
+                                Student reading tracker built in Lecture 11 via vibe-coding methodology. Implements book
+                                status transitions (Want to Read / Reading / Finished), live category filters, duplicate
+                                title guard, 60-character restriction, per-card deletion, and summary count metrics.
+                            </p>
+                            <div class="project-highlights-box">
+                                <span>&bull; Defect prevention: Case/space duplicates &amp; 60 char limit</span>
+                                <span>&bull; Real-time status counters &amp; local persistence</span>
+                            </div>
+                            <div class="project-links-row">
+                                <a href="https://github.com/AyushCodes999/Reading-list-app_PE_25BCON0781" class="btn btn-sm btn-project-link" target="_blank" rel="noopener noreferrer" title="View Reading List App Repo on GitHub">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    <span>GITHUB REPO</span>
+                                </a>
+                                <button type="button" class="btn btn-sm btn-disabled" aria-disabled="true"
+                                    title="Live demo destination pending: Ayush to provide deployment URL">
+                                    <span>DEMO (PENDING)</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Empty state for search -->
+                <div id="noProjectsMessage" class="no-projects-msg hidden">
+                    <span class="no-proj-icon">🔍</span>
+                    <h3>NO MATCHING ARCHIVE DOSSIER FOUND</h3>
+                    <p>Try searching for "Python", "Quiz", "Book", or clear query.</p>
+                    <button id="resetSearchBtn" class="btn btn-hero-secondary btn-sm">RESET SEARCH</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. AI CHATBOT SECTION (Terminal Command Interface) -->
+        <section id="chatbot" class="section section-chatbot">
+            <div class="container">
+                <div class="terminal-container">
+                    <div class="terminal-window">
+                        <!-- Terminal Title Bar -->
+                        <div class="terminal-titlebar">
+                            <div class="titlebar-controls" aria-hidden="true">
+                                <span class="mac-dot dot-red"></span>
+                                <span class="mac-dot dot-yellow"></span>
+                                <span class="mac-dot dot-green"></span>
+                            </div>
+                            <span class="terminal-title-text">TERMINAL // AYUSH_PORTFOLIO_AI.EXE</span>
+                            <div class="terminal-actions">
+                                <button id="configKeyBtn" class="term-btn" type="button" title="Configure Gemini API Key">
+                                    ⚙️ API KEY
+                                </button>
+                                <button id="clearChatBtn" class="term-btn" type="button" title="Clear Chat History">
+                                    CLEAR
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Terminal Command Bar -->
+                        <div class="suggested-pills-bar">
+                            <span class="pill-label">QUICK_QUERY:</span>
+                            <div class="pills-scroll">
+                                <button class="chat-pill" data-question="Who are you?">WHO ARE YOU?</button>
+                                <button class="chat-pill" data-question="What are your skills?">WHAT ARE YOUR SKILLS?</button>
+                                <button class="chat-pill" data-question="What projects have you completed?">COMPLETED PROJECTS</button>
+                                <button class="chat-pill" data-question="Tell me about Python Programs.">PYTHON PROGRAMS</button>
+                                <button class="chat-pill" data-question="Tell me about Messy Python Code.">MESSY CODE REFACTOR</button>
+                                <button class="chat-pill" data-question="Tell me about Cursor AI Bug Fixing.">CURSOR AI BUG FIXING</button>
+                                <button class="chat-pill" data-question="Where is your GitHub?">GITHUB PROFILE</button>
+                            </div>
+                        </div>
+
+                        <!-- Chat Messages Log -->
+                        <div class="chat-messages" id="chatMessages" role="log" aria-live="polite">
+                            <div class="chat-msg bot-msg">
+                                <div class="msg-avatar">🤖</div>
+                                <div class="msg-bubble">
+                                    <p><strong>[SYSTEM ONLINE]</strong> Grounded knowledge engine loaded for <strong>Ayush Raj Chandel</strong> (25BCON0781), CSE student at JECRC University.</p>
+                                    <p>Ask anything regarding his coursework projects, unit tests, technical skills, or contact channels!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chat Input Form -->
+                        <form id="chatForm" class="chat-input-form">
+                            <span class="cli-prompt" aria-hidden="true">&gt;&gt;</span>
+                            <input type="text" id="chatInput"
+                                placeholder="Type a question about Ayush's projects, coursework, or skills..."
+                                autocomplete="off" required>
+                            <button type="submit" id="chatSendBtn" class="chat-send-btn" aria-label="Send message">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </form>
+
+                        <!-- API Key Settings Modal: Selective Frosted Glass Panel -->
+                        <div id="apiKeyModal" class="api-modal hidden">
+                            <div class="api-modal-content frosted-glass-modal">
+                                <div class="api-modal-header">
+                                    <h4>GEMINI API KEY CONFIGURATION</h4>
+                                    <button id="closeApiModalBtn" class="close-modal-btn" aria-label="Close modal">&times;</button>
+                                </div>
+                                <p class="api-modal-desc">
+                                    Connect your free Google Gemini API key (<a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">Google AI Studio</a>).
+                                    Stored securely in browser session/storage only. Never committed to source code.
+                                </p>
+                                <div class="api-input-wrap">
+                                    <input type="password" id="customApiKeyInput" placeholder="AIzaSy..." autocomplete="off">
+                                    <button id="saveApiKeyBtn" class="btn btn-sm btn-hero-secondary">SAVE KEY</button>
+                                </div>
+                                <div class="api-key-status" id="apiKeyStatusMessage">
+                                    <em>Using built-in grounded knowledge engine (Real-time fallback enabled).</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CONTACT SECTION (Industrial Dispatch Deck) -->
+        <section id="contact" class="section section-contact">
+            <div class="container">
+                <div class="contact-deck">
+                    <div class="contact-header-strip">
+                        <span class="section-tag-brutal">[DISPATCH // CHANNELS]</span>
+                        <h2 class="section-title-bold" data-rn-type="underline" data-rn-color="#2563EB" data-rn-width="6">
+                            TRANSMIT MESSAGE
+                        </h2>
+                    </div>
+
+                    <div class="contact-grid-split">
+                        <!-- Direct Link Cards -->
+                        <div class="contact-cards-column">
+                            <h3>COMMUNICATION CHANNELS</h3>
+                            <p>Direct inquiries, engineering collaborations, technical discussions, and recruiting opportunities.</p>
+
+                            <div class="contact-cards-stack">
+                                <a href="mailto:ayush.25bcon0781@jecrcu.edu.in" class="direct-link-card">
+                                    <div class="card-left-ico">📧</div>
+                                    <div class="card-right-info">
+                                        <span class="channel-lbl">OFFICIAL_EMAIL</span>
+                                        <span class="channel-val">ayush.25bcon0781@jecrcu.edu.in</span>
+                                    </div>
+                                </a>
+
+                                <a href="https://github.com/AyushCodes999" target="_blank" rel="noopener noreferrer" class="direct-link-card">
+                                    <div class="card-left-ico">🐙</div>
+                                    <div class="card-right-info">
+                                        <span class="channel-lbl">GITHUB_PROFILE</span>
+                                        <span class="channel-val">github.com/AyushCodes999</span>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/ayush-raj-chandel-694575317/" target="_blank" rel="noopener noreferrer" class="direct-link-card">
+                                    <div class="card-left-ico">💼</div>
+                                    <div class="card-right-info">
+                                        <span class="channel-lbl">LINKEDIN_CONNECT</span>
+                                        <span class="channel-val">linkedin.com/in/ayush-raj-chandel-694575317</span>
+                                    </div>
+                                </a>
+
+                                <div class="direct-link-card non-interactive">
+                                    <div class="card-left-ico">📍</div>
+                                    <div class="card-right-info">
+                                        <span class="channel-lbl">CAMPUS_LOCATION</span>
+                                        <span class="channel-val">CSE Department, JECRC University, Jaipur, Rajasthan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Transmission Form -->
+                        <div class="contact-form-column">
+                            <h3>DIRECT TRANSMISSION</h3>
+                            <form id="contactForm" class="industrial-form">
+                                <div class="form-row-2">
+                                    <div class="input-block">
+                                        <label for="contactName">YOUR NAME</label>
+                                        <input type="text" id="contactName" placeholder="Recruiter / Engineer" required>
+                                    </div>
+                                    <div class="input-block">
+                                        <label for="contactEmail">YOUR EMAIL</label>
+                                        <input type="email" id="contactEmail" placeholder="name@domain.com" required>
+                                    </div>
+                                </div>
+                                <div class="input-block">
+                                    <label for="contactSubject">SUBJECT</label>
+                                    <input type="text" id="contactSubject" placeholder="Internship Opportunity / Inquiry" required>
+                                </div>
+                                <div class="input-block">
+                                    <label for="contactMessage">TRANSMISSION CONTENT</label>
+                                    <textarea id="contactMessage" rows="4" placeholder="Enter message text here..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-hero-secondary btn-full-submit" id="sendMessageBtn">
+                                    <span>SEND TRANSMISSION</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                                    </svg>
+                                </button>
+                                <div id="formSuccessMessage" class="form-alert-banner hidden">
+                                    TRANSMISSION RECEIVED &bull; ACKNOWLEDGED
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Industrial Footer -->
+    <footer class="footer-industrial">
+        <div class="container footer-content-wrap">
+            <div class="footer-col-main">
+                <span class="footer-bold-brand">&lt; AYUSH RAJ CHANDEL /&gt;</span>
+                <p>B.Tech Computer Science &amp; Engineering (2025–2029) &bull; ROLL: 25BCON0781</p>
+                <p class="footer-academy-tag">JECRC University, Jaipur &bull; Editorial Neo-Brutalism &bull; Selective Glassmorphism</p>
+            </div>
+            <div class="footer-col-nav">
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#skills">SKILLS</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#chatbot">CHATBOT</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+            <div class="footer-col-back">
+                <a href="#home" class="btn-back-top">&uarr; TOP</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chatbot Launcher Button (Selective Glassmorphism FAB) -->
+    <a href="#chatbot" class="floating-chat-fab" aria-label="Open AI Chatbot" title="Chat with Ayush's AI">
+        <span class="fab-icon">💬</span>
+    </a>
+
+    <!-- Rough Notation Library for Hand-Drawn Sketch Annotations -->
+    <script src="rough-notation.iife.js"></script>
+
+    <!-- Main Logic Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
